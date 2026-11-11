@@ -16,6 +16,11 @@ jobs:
     name: Shellcheck
     runs-on: ubuntu-24.04
 
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [c1s]
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v7
